@@ -2,19 +2,20 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 
-import { AuthorsComponent } from './authors.component';
-import { FeatureModule } from '../featuremodule/feature.module';
+import { FeatureComponent } from './feature.component';
 
 const routes: Routes = [
-  { path: '', component: AuthorsComponent },
+  { path: '', component: FeatureComponent },
 ];
 
 @NgModule({
   imports: [
-    FeatureModule,
     CommonModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [AuthorsComponent]
+  declarations: [FeatureComponent],
+  exports: [
+    FeatureComponent
+  ]
 })
-export class Mod2Module { }
+export class FeatureModule { }

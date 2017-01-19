@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 
 import { Mod3Component } from './mod3.component';
-
+import { FeatureModule } from '../../featuremodule/feature.module';
 
 const routes: Routes = [
   { path: '', component: Mod3Component },
@@ -11,6 +11,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
+    FeatureModule,
     CommonModule,
     RouterModule.forChild(routes)
   ],
