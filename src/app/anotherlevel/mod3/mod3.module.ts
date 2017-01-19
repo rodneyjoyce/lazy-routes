@@ -2,10 +2,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 
-import { AuthorsComponent } from './authors.component';
+import { Mod3Component } from './mod3.component';
+
 
 const routes: Routes = [
-  { path: '', component: AuthorsComponent },
+  { path: '', component: Mod3Component },
 ];
 
 @NgModule({
@@ -13,6 +14,9 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [AuthorsComponent]
+  declarations: [Mod3Component],
+  exports: [
+    Mod3Component
+  ]
 })
-export class Mod2Module { }
+export class Mod3Module { }

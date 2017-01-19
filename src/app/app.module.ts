@@ -7,8 +7,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 
 const routes: Routes = [
-  { path: 'books', loadChildren: './mod1/mod1.module#Mod1Module' },
-  { path: 'authors', loadChildren: './mod2/mod2.module#Mod2Module' },
+  { path: 'books', loadChildren: 'app/mod1/mod1.module#Mod1Module' },
+  { path: 'authors', loadChildren: 'app/mod2/mod2.module#Mod2Module' },
+   { path: 'mod3', loadChildren: 'app/anotherlevel/mod3/mod3.module#Mod3Module' },
 ];
 const routerModule = RouterModule.forRoot(routes);
 
